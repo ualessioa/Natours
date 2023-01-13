@@ -1,0 +1,41 @@
+.section-about-content-composition {
+  flex: 0 1 50%;
+  position: relative;
+
+  &:hover .composition-photo:not(:hover) {
+    transform: scale(0.95);
+  }
+}
+
+.composition-photo {
+  width: 55%;
+  box-shadow: 0 1.5rem 4rem rgba($black, 0.4);
+  position: absolute;
+  transition: all 0.3s;
+  outline-offset: 1.5rem;
+
+  &:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 2rem 6rem rgba($black, 0.5);
+    z-index: 2;
+    outline: 1.5rem solid $primary-color;
+  }
+}
+
+.comp-photo-1 {
+  left: 0%;
+  top: -2rem;
+  z-index: 1;
+}
+
+.comp-photo-2 {
+  right: 0%;
+  top: 2rem;
+  z-index: 1;
+}
+
+.comp-photo-3 {
+  left: 20%;
+  top: 10rem;
+  z-index: 1;
+}
