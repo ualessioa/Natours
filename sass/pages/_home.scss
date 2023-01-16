@@ -26,3 +26,30 @@
     }
   }
 }
+
+.section-features {
+  display: flex;
+  justify-content: center;
+  padding: 20rem 0;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($primary-color-light, 0.808),
+      rgba($primary-color-dark, 0.774)
+    ),
+    url(../img/nat-4.jpg);
+  background-size: cover;
+  background-position: top;
+  transform: skewY(-7deg) translateY(-8.2rem);
+
+  &-container {
+    display: flex;
+    max-width: 120rem;
+    column-gap: 6rem;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  & > * {
+    transform: skewY(7deg);
+  }
+}
