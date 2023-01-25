@@ -1,4 +1,5 @@
 .btn {
+  &,
   &:link,
   &:visited {
     display: inline-block;
@@ -8,6 +9,10 @@
     border-radius: 5rem;
     transition: all 0.3s;
     position: relative;
+
+    //changes for button element
+    border: none;
+    cursor: pointer;
   }
 
   &:hover {
@@ -20,7 +25,9 @@
     }
   }
 
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     transform: translate(-1px);
     box-shadow: 0 0.5rem 2rem rgba($black, 0.253);
   }
