@@ -526,6 +526,67 @@ body {
     padding-top: 2rem;
     display: inline-block; }
 
+.navigation-checkbox {
+  display: none; }
+
+.navigation-button {
+  background-color: #fff;
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  z-index: 100;
+  position: fixed;
+  top: 6rem;
+  right: 6rem; }
+
+.navigation-background {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  background-image: radial-gradient(#7ed56f, #28b485);
+  position: fixed;
+  z-index: 98;
+  top: 6.5rem;
+  right: 6.5rem; }
+
+.navigation-nav {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.navigation-list {
+  list-style: none;
+  text-align: center; }
+
+.navigation-item {
+  margin: 1rem; }
+
+.navigation-link:link, .navigation-link:visited {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 300;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+  background-size: 250%;
+  transition: all 0.4s ease; }
+
+.navigation-link:hover, .navigation-link:active {
+  background-position: 100%;
+  color: #55c57a;
+  transform: translateX(1rem); }
+
+.navigation-link span {
+  margin-right: 1.5rem; }
+
 .section-about {
   background-color: #f7f7f7;
   padding: 25rem 0;
