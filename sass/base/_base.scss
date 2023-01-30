@@ -7,4 +7,27 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  padding: 3rem;
+
+  @include respond-bigger(112em) {
+    font-size: 75%;
+  }
+
+  @include respond(82em) {
+    font-size: 56.25%;
+  }
+
+  @include respond(69em) {
+    font-size: 52%;
+  }
+
+  @include respond(57em) {
+    font-size: 50%;
+  }
+}
+
+body {
+  @include respond(69em) {
+    padding: 0;
+  }
 }

@@ -65,6 +65,10 @@
       right: 1%;
       width: 80%;
 
+      @include respond(69em) {
+        font-size: 2rem;
+      }
+
       &-span-1 {
         padding: 1rem 1.5rem;
         -webkit-box-decoration-break: clone;
@@ -74,6 +78,10 @@
           rgba($secondary-color-light, 0.8),
           rgba($secondary-color-dark, 0.8)
         );
+
+        @include respond(69em) {
+          padding: 0.5rem 1rem;
+        }
       }
 
       &-span-2 {
@@ -85,6 +93,9 @@
           rgba($primary-color-light, 0.8),
           rgba($primary-color-dark, 0.8)
         );
+        @include respond(69em) {
+          padding: 0.5rem 1rem;
+        }
       }
 
       &-span-3 {
@@ -96,10 +107,15 @@
           rgba($tertiary-color-light, 0.8),
           rgba($tertiary-color-dark, 0.8)
         );
+
+        @include respond(69em) {
+          padding: 0.5rem 1rem;
+        }
       }
     }
 
     & .card-details {
+      margin-top: 1rem;
       padding: 3rem;
       display: flex;
       justify-content: center;
@@ -115,6 +131,29 @@
           &:not(:last-of-type) {
             border-bottom: 1px solid #eee;
           }
+        }
+      }
+
+      @include respond(103em) {
+        padding: 2rem 1rem 0rem;
+
+        ul li {
+          padding: 0.8rem;
+        }
+      }
+
+      @include respond(69em) {
+        padding: 0.5rem 0rem;
+        ul li {
+          padding: 0.3rem;
+        }
+      }
+
+      @include respond(57em) {
+        padding: 0.25rem;
+
+        ul li {
+          padding: 0.25rem;
         }
       }
     }

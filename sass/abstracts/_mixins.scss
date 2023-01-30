@@ -1,0 +1,18 @@
+// MEDIA QUERY MANAGER
+
+// breakpoints names
+// big-screen 1792px
+// mid-laptop 1648px
+// sm-laptop 1312px
+
+@mixin respond($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin respond-bigger($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
