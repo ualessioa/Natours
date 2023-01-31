@@ -5,6 +5,10 @@
   height: 51vh;
   flex: 1;
 
+  @include respond(57em) {
+    padding: 0 0 8rem;
+  }
+
   //FRONT SIDE
 
   &-side-a {

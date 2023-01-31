@@ -6,7 +6,7 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  padding: 3rem; }
+  overflow-x: hidden; }
   @media screen and (min-width: 112em) {
     html {
       font-size: 75%; } }
@@ -19,10 +19,16 @@ html {
   @media screen and (max-width: 57em) {
     html {
       font-size: 50%; } }
+  @media screen and (max-width: 44em) {
+    html {
+      font-size: 45%; } }
 
-@media screen and (max-width: 69em) {
-  body {
-    padding: 0; } }
+body {
+  box-sizing: border-box;
+  padding: 3rem; }
+  @media screen and (max-width: 69em) {
+    body {
+      padding: 0; } }
 
 @keyframes moveInLeft {
   0% {
@@ -70,6 +76,9 @@ body {
   color: transparent;
   display: inline-block;
   transition: all 0.3s; }
+  @media screen and (max-width: 44em) {
+    .heading-secondary {
+      font-size: 3rem; } }
   .heading-secondary:hover {
     transform: skewY(2deg) skewX(2deg) scale(1.05);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
@@ -172,6 +181,11 @@ body {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
   position: relative; }
+  @media screen and (max-width: 38em) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 65vh, 0% 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 65vh, 0% 100%);
+      height: 75vh; } }
   .header-logo-box {
     position: absolute;
     top: 4rem;
@@ -205,12 +219,19 @@ body {
     letter-spacing: 3.5rem;
     animation: moveInLeft 1s;
     animation-timing-function: ease-out; }
+    @media screen and (max-width: 38em) {
+      .heading-primary-main {
+        font-size: 5rem;
+        letter-spacing: 1rem; } }
   .heading-primary-sub {
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1.7rem;
     animation: moveInRight 1s;
     animation-timing-function: ease-out; }
+    @media screen and (max-width: 38em) {
+      .heading-primary-sub {
+        letter-spacing: 0.5rem; } }
 
 .section-about-content-composition {
   flex: 0 1 50%;
@@ -224,6 +245,9 @@ body {
   position: absolute;
   transition: all 0.3s;
   outline-offset: 1.5rem; }
+  @media screen and (max-width: 38em) {
+    .composition-photo {
+      width: 35vw; } }
   .composition-photo:hover {
     transform: scale(1.05) translateY(-2px);
     box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.5);
@@ -251,6 +275,9 @@ body {
   position: relative;
   height: 51vh;
   flex: 1; }
+  @media screen and (max-width: 57em) {
+    .card {
+      padding: 0 0 8rem; } }
   .card-side-a {
     position: absolute;
     top: 0;
@@ -521,6 +548,9 @@ body {
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   transition: all 0.3s; }
+  @media screen and (max-width: 38em) {
+    .feature-box {
+      flex: 0 0 1%; } }
   .feature-box-icon {
     font-size: 6rem;
     margin-bottom: 0.5rem;
@@ -576,7 +606,8 @@ body {
   .footer-copyright {
     border-top: 1px solid #f7f7f7;
     padding-top: 2rem;
-    display: inline-block; }
+    display: inline-block;
+    text-align: center; }
 
 .navigation {
   position: relative; }
@@ -596,6 +627,10 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer; }
+    @media screen and (max-width: 69em) {
+      .navigation-button {
+        top: 3rem;
+        right: 5rem; } }
   .navigation-background {
     height: 6rem;
     width: 6rem;
@@ -606,6 +641,10 @@ body {
     top: 6.5rem;
     right: 6.5rem;
     transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
+    @media screen and (max-width: 69em) {
+      .navigation-background {
+        top: 3.5rem;
+        right: 5.5rem; } }
   .navigation-nav {
     height: 100vh;
     width: 100vw;
@@ -752,11 +791,20 @@ body {
   justify-content: center;
   align-items: center;
   row-gap: 8rem; }
+  @media screen and (max-width: 38em) {
+    .section-about {
+      padding: 15rem 4rem 45rem; } }
   .section-about-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     column-gap: 8rem; }
+    @media screen and (max-width: 38em) {
+      .section-about-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 5rem; } }
     .section-about-content-text {
       align-self: stretch;
       flex: 0 1 50%;
@@ -776,10 +824,22 @@ body {
   transform: skewY(-7deg) translateY(-8.2rem); }
   .section-features-container {
     display: flex;
+    width: 70%;
     max-width: 120rem;
     column-gap: 6rem;
     justify-content: center;
     align-items: stretch; }
+    @media screen and (max-width: 69em) {
+      .section-features-container {
+        width: 100%;
+        column-gap: 2rem; } }
+    @media screen and (max-width: 38em) {
+      .section-features-container {
+        width: 70%;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        row-gap: 2rem; } }
   .section-features > * {
     transform: skewY(7deg); }
 
@@ -799,6 +859,12 @@ body {
     justify-content: space-evenly;
     align-items: stretch;
     column-gap: 8rem; }
+    @media screen and (max-width: 57em) {
+      .section-tours-container {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
+        row-gap: 2rem; } }
 
 .section-stories {
   display: flex;
@@ -806,7 +872,8 @@ body {
   align-items: center;
   padding: 15rem 0;
   row-gap: 8rem;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .section-stories-container {
     width: 75%;
     max-width: 120rem;
@@ -815,6 +882,9 @@ body {
     justify-content: center;
     align-items: center;
     row-gap: 6rem; }
+    @media screen and (max-width: 38em) {
+      .section-stories-container {
+        width: 100%; } }
 
 .section-booking {
   padding: 15rem 0;
@@ -823,11 +893,18 @@ body {
 .booking {
   width: 85%;
   max-width: 120rem;
-  background-image: linear-gradient(105deg, white 0%, rgba(255, 255, 255, 0.9) 20%, rgba(255, 255, 255, 0.8) 30%, rgba(255, 255, 255, 0.7) 40%, rgba(255, 255, 255, 0.6) 50%, transparent 50%, transparent), url(./../../img/nat-10.jpg);
+  background-image: linear-gradient(105deg, white 0%, rgba(255, 255, 255, 0.9) 20%, rgba(255, 255, 255, 0.8) 30%, rgba(255, 255, 255, 0.7) 40%, rgba(255, 255, 255, 0.6) 50%, transparent 50%, transparent), url(./../img/nat-10.jpg);
   background-size: cover;
   margin: auto;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
   border-radius: 3px; }
+  @media screen and (max-width: 38em) {
+    .booking {
+      width: 100%;
+      background-image: linear-gradient(105deg, white 0%, rgba(255, 255, 255, 0.9) 20%, rgba(255, 255, 255, 0.8) 30%, rgba(255, 255, 255, 0.7) 40%, rgba(255, 255, 255, 0.6) 75%, transparent 75%, transparent), url(./../img/nat-10.jpg); } }
   .booking-form-container {
     width: 50%;
     padding: 6rem; }
+    @media screen and (max-width: 38em) {
+      .booking-form-container {
+        width: 100%; } }

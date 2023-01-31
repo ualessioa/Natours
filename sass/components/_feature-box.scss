@@ -8,6 +8,10 @@
   box-shadow: 0 1.5rem 4rem rgba($black, 0.15);
   transition: all 0.3s;
 
+  @include respond(38em) {
+    flex: 0 0 1%;
+  }
+
   &-icon {
     font-size: 6rem;
     margin-bottom: 0.5rem;

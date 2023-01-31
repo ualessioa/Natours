@@ -4,6 +4,10 @@
 // big-screen 1792px
 // mid-laptop 1648px
 // sm-laptop 1312px
+// landscape-tablet 1104px
+// portrait tablet 912px
+// small tablet 704px
+// big phone 608px
 
 @mixin respond($breakpoint) {
   @media screen and (max-width: $breakpoint) {
