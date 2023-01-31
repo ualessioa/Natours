@@ -33,7 +33,18 @@
           $secondary-color-light,
           $secondary-color-dark
         ),
-        url(./../img/nat-5.jpg);
+        url(./../img/nat-5.webp);
+
+      @media screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+        (-webkit-min-resolution: 192dpi) and (min-width: 37.5em),
+        (min-width: 125em) {
+        background-image: linear-gradient(
+            to bottom right,
+            $secondary-color-light,
+            $secondary-color-dark
+          ),
+          url(./../img/nat-5.jpg);
+      }
     }
 
     &.card-2 .card-picture {
@@ -42,7 +53,18 @@
           $primary-color-light,
           $primary-color-dark
         ),
-        url(./../img/nat-6.jpg);
+        url(./../img/nat-6.webp);
+
+      @media screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+        (-webkit-min-resolution: 192dpi) and (min-width: 37.5em),
+        (min-width: 125em) {
+        background-image: linear-gradient(
+            to bottom right,
+            $primary-color-light,
+            $primary-color-dark
+          ),
+          url(./../img/nat-6.jpg);
+      }
     }
 
     &.card-3 .card-picture {
@@ -51,7 +73,18 @@
           $tertiary-color-light,
           $tertiary-color-dark
         ),
-        url(./../img/nat-7.jpg);
+        url(./../img/nat-7.webp);
+
+      @media screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+        (-webkit-min-resolution: 192dpi) and (min-width: 37.5em),
+        (min-width: 125em) {
+        background-image: linear-gradient(
+            to bottom right,
+            $tertiary-color-light,
+            $tertiary-color-dark
+          ),
+          url(./../img/nat-7.jpg);
+      }
     }
 
     & .card-heading {
@@ -154,6 +187,10 @@
     backface-visibility: hidden;
     box-shadow: 0 1.5rem 4rem rgba($black, 0.15);
     border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     &.card-1 {
       background-image: linear-gradient(

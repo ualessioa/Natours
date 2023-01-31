@@ -75,7 +75,8 @@ body {
   -webkit-background-clip: text;
   color: transparent;
   display: inline-block;
-  transition: all 0.3s; }
+  transition: all 0.3s;
+  backface-visibility: hidden; }
   @media screen and (max-width: 44em) {
     .heading-secondary {
       font-size: 3rem; } }
@@ -175,12 +176,15 @@ body {
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.808), rgba(40, 180, 133, 0.774)), url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.808), rgba(40, 180, 133, 0.774)), url(../img/hero-small.jpg);
   background-size: cover;
   background-position: top;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
   position: relative; }
+  @media screen and (min-resolution: 192dpi) and (min-width: 37.5em), (-webkit-min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    .header {
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.808), rgba(40, 180, 133, 0.774)), url(../img/hero.jpg); } }
   @media screen and (max-width: 38em) {
     .header {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 65vh, 0% 100%);
@@ -293,11 +297,20 @@ body {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
       clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
     .card-side-a.card-1 .card-picture {
-      background-image: linear-gradient(to bottom right, #ffb900, #ff7730), url(./../img/nat-5.jpg); }
+      background-image: linear-gradient(to bottom right, #ffb900, #ff7730), url(./../img/nat-5.webp); }
+      @media screen and (min-resolution: 192dpi) and (min-width: 37.5em), (-webkit-min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+        .card-side-a.card-1 .card-picture {
+          background-image: linear-gradient(to bottom right, #ffb900, #ff7730), url(./../img/nat-5.jpg); } }
     .card-side-a.card-2 .card-picture {
-      background-image: linear-gradient(to bottom right, #7ed56f, #28b485), url(./../img/nat-6.jpg); }
+      background-image: linear-gradient(to bottom right, #7ed56f, #28b485), url(./../img/nat-6.webp); }
+      @media screen and (min-resolution: 192dpi) and (min-width: 37.5em), (-webkit-min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+        .card-side-a.card-2 .card-picture {
+          background-image: linear-gradient(to bottom right, #7ed56f, #28b485), url(./../img/nat-6.jpg); } }
     .card-side-a.card-3 .card-picture {
-      background-image: linear-gradient(to bottom right, #2998ff, #5643fa), url(./../img/nat-7.jpg); }
+      background-image: linear-gradient(to bottom right, #2998ff, #5643fa), url(./../img/nat-7.webp); }
+      @media screen and (min-resolution: 192dpi) and (min-width: 37.5em), (-webkit-min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+        .card-side-a.card-3 .card-picture {
+          background-image: linear-gradient(to bottom right, #2998ff, #5643fa), url(./../img/nat-7.jpg); } }
     .card-side-a .card-heading {
       font-size: 2.8rem;
       font-weight: 300;
@@ -361,7 +374,11 @@ body {
     width: 100%;
     backface-visibility: hidden;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-    border-radius: 3px; }
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
     .card-side-b.card-1 {
       background-image: linear-gradient(to bottom right, #ffb900, #ff7730); }
     .card-side-b.card-2 {
@@ -718,8 +735,12 @@ body {
   left: 0;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease-in; }
+  @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+    .popup {
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px); } }
   .popup:target {
     visibility: visible;
     opacity: 1; }
@@ -900,18 +921,21 @@ body {
 .booking {
   width: 85%;
   max-width: 120rem;
-  background-image: linear-gradient(105deg, white 0%, rgba(255, 255, 255, 0.9) 20%, rgba(255, 255, 255, 0.8) 30%, rgba(255, 255, 255, 0.7) 40%, rgba(255, 255, 255, 0.6) 50%, transparent 50%, transparent), url(./../img/nat-10.jpg);
+  background-image: linear-gradient(105deg, white 0%, rgba(255, 255, 255, 0.9) 20%, rgba(255, 255, 255, 0.8) 30%, rgba(255, 255, 255, 0.7) 40%, rgba(255, 255, 255, 0.6) 50%, transparent 50%, transparent), url(./../img/nat-10.webp);
   background-size: cover;
   margin: auto;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
   border-radius: 3px; }
+  @media screen and (min-resolution: 192dpi) and (min-width: 37.5em), (-webkit-min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 100em) {
+    .booking {
+      background-image: linear-gradient(105deg, white 0%, rgba(255, 255, 255, 0.9) 20%, rgba(255, 255, 255, 0.8) 30%, rgba(255, 255, 255, 0.7) 40%, rgba(255, 255, 255, 0.6) 50%, transparent 50%, transparent), url(./../img/nat-10.jpg); } }
   @media screen and (max-width: 57em) {
     .booking {
-      background-image: linear-gradient(105deg, white 0%, rgba(255, 255, 255, 0.9) 20%, rgba(255, 255, 255, 0.8) 30%, rgba(255, 255, 255, 0.7) 40%, rgba(255, 255, 255, 0.6) 70%, transparent 70%, transparent), url(./../img/nat-10.jpg); } }
+      background-image: linear-gradient(105deg, white 0%, rgba(255, 255, 255, 0.9) 20%, rgba(255, 255, 255, 0.8) 30%, rgba(255, 255, 255, 0.7) 40%, rgba(255, 255, 255, 0.6) 70%, transparent 70%, transparent), url(./../img/nat-10.webp); } }
   @media screen and (max-width: 38em) {
     .booking {
       width: 100%;
-      background-image: linear-gradient(105deg, white 0%, rgba(255, 255, 255, 0.9) 20%, rgba(255, 255, 255, 0.8) 30%, rgba(255, 255, 255, 0.7) 40%, rgba(255, 255, 255, 0.6) 80%, transparent 80%, transparent), url(./../img/nat-10.jpg); } }
+      background-image: linear-gradient(105deg, white 0%, rgba(255, 255, 255, 0.9) 20%, rgba(255, 255, 255, 0.8) 30%, rgba(255, 255, 255, 0.7) 40%, rgba(255, 255, 255, 0.6) 80%, transparent 80%, transparent), url(./../img/nat-10.webp); } }
   .booking-form-container {
     width: 50%;
     padding: 6rem; }

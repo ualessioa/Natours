@@ -21,6 +21,7 @@ body {
   color: transparent;
   display: inline-block;
   transition: all 0.3s;
+  backface-visibility: hidden;
 
   @include respond(44em) {
     font-size: 3rem;

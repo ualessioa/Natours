@@ -5,12 +5,23 @@
       rgba($primary-color-light, 0.808),
       rgba($primary-color-dark, 0.774)
     ),
-    url(../img/hero.jpg);
+    url(../img/hero-small.jpg);
   background-size: cover;
   background-position: top;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
   position: relative;
+
+  @media screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    (-webkit-min-resolution: 192dpi) and (min-width: 37.5em),
+    (min-width: 125em) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($primary-color-light, 0.808),
+        rgba($primary-color-dark, 0.774)
+      ),
+      url(../img/hero.jpg);
+  }
 
   @include respond(38em) {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 65vh, 0% 100%);

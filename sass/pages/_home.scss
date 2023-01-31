@@ -152,7 +152,24 @@
 
       transparent
     ),
-    url(./../img/nat-10.jpg);
+    url(./../img/nat-10.webp);
+
+  @media screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    (-webkit-min-resolution: 192dpi) and (min-width: 37.5em),
+    (min-width: 100em) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($white, 1) 0%,
+        rgba($white, 0.9) 20%,
+        rgba($white, 0.8) 30%,
+        rgba($white, 0.7) 40%,
+        rgba($white, 0.6) 50%,
+        transparent 50%,
+
+        transparent
+      ),
+      url(./../img/nat-10.jpg);
+  }
   background-size: cover;
   margin: auto;
   box-shadow: 0 1.5rem 4rem rgba($black, 0.2);
@@ -170,7 +187,7 @@
 
         transparent
       ),
-      url(./../img/nat-10.jpg);
+      url(./../img/nat-10.webp);
   }
 
   @include respond(38em) {
@@ -186,7 +203,7 @@
 
         transparent
       ),
-      url(./../img/nat-10.jpg);
+      url(./../img/nat-10.webp);
   }
 
   &-form-container {
