@@ -275,9 +275,6 @@ body {
   position: relative;
   height: 51vh;
   flex: 1; }
-  @media screen and (max-width: 57em) {
-    .card {
-      padding: 0 0 8rem; } }
   .card-side-a {
     position: absolute;
     top: 0;
@@ -352,21 +349,11 @@ body {
           padding: 1rem; }
           .card-side-a .card-details ul li:not(:last-of-type) {
             border-bottom: 1px solid #eee; }
-      @media screen and (max-width: 103em) {
+      @media screen and (max-width: 38em) {
         .card-side-a .card-details {
           padding: 2rem 1rem 0rem; }
           .card-side-a .card-details ul li {
             padding: 0.8rem; } }
-      @media screen and (max-width: 69em) {
-        .card-side-a .card-details {
-          padding: 0.5rem 0rem; }
-          .card-side-a .card-details ul li {
-            padding: 0.3rem; } }
-      @media screen and (max-width: 57em) {
-        .card-side-a .card-details {
-          padding: 0.25rem; }
-          .card-side-a .card-details ul li {
-            padding: 0.25rem; } }
   .card-side-b {
     transform: rotateY(180deg);
     transition: all 0.8s ease;
@@ -382,12 +369,14 @@ body {
     .card-side-b.card-3 {
       background-image: linear-gradient(to bottom right, #2998ff, #5643fa); }
     .card-side-b .card-cta {
-      height: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       row-gap: 8rem; }
+      @media screen and (max-width: 57em) {
+        .card-side-b .card-cta {
+          height: 51vh; } }
       .card-side-b .card-cta .card-price-box {
         text-align: center;
         color: #fff; }
@@ -410,8 +399,14 @@ body {
   padding: 6rem;
   font-size: 1.6rem;
   transform: skewX(-12deg); }
+  @media screen and (max-width: 38em) {
+    .story {
+      transform: skewX(-4deg); } }
   .story > * {
     transform: skewX(12deg); }
+    @media screen and (max-width: 38em) {
+      .story > * {
+        transform: skewX(4deg); } }
   .story-shape {
     position: relative;
     float: left;
@@ -745,12 +740,21 @@ body {
     transition: all 0.3s 0.2s ease;
     display: flex;
     align-items: stretch; }
+    @media screen and (max-width: 38em) {
+      .popup-content {
+        flex-direction: column; } }
     .popup-content .popup-left {
       flex: 0 0 30%;
       display: flex;
       flex-direction: column; }
+      @media screen and (max-width: 38em) {
+        .popup-content .popup-left {
+          flex-direction: row; } }
       .popup-content .popup-left .popup-img {
         width: 100%; }
+        @media screen and (max-width: 38em) {
+          .popup-content .popup-left .popup-img {
+            width: 50%; } }
     .popup-content .popup-right {
       flex: 0 0 70%;
       display: flex;
@@ -758,6 +762,9 @@ body {
       align-items: flex-start;
       justify-content: center;
       padding: 3rem 5rem; }
+      @media screen and (max-width: 38em) {
+        .popup-content .popup-right {
+          flex-grow: 3; } }
       .popup-content .popup-right .popup-text {
         font-size: 1.4rem;
         margin-bottom: 4rem;
@@ -898,13 +905,19 @@ body {
   margin: auto;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
   border-radius: 3px; }
+  @media screen and (max-width: 57em) {
+    .booking {
+      background-image: linear-gradient(105deg, white 0%, rgba(255, 255, 255, 0.9) 20%, rgba(255, 255, 255, 0.8) 30%, rgba(255, 255, 255, 0.7) 40%, rgba(255, 255, 255, 0.6) 70%, transparent 70%, transparent), url(./../img/nat-10.jpg); } }
   @media screen and (max-width: 38em) {
     .booking {
       width: 100%;
-      background-image: linear-gradient(105deg, white 0%, rgba(255, 255, 255, 0.9) 20%, rgba(255, 255, 255, 0.8) 30%, rgba(255, 255, 255, 0.7) 40%, rgba(255, 255, 255, 0.6) 75%, transparent 75%, transparent), url(./../img/nat-10.jpg); } }
+      background-image: linear-gradient(105deg, white 0%, rgba(255, 255, 255, 0.9) 20%, rgba(255, 255, 255, 0.8) 30%, rgba(255, 255, 255, 0.7) 40%, rgba(255, 255, 255, 0.6) 80%, transparent 80%, transparent), url(./../img/nat-10.jpg); } }
   .booking-form-container {
     width: 50%;
     padding: 6rem; }
+    @media screen and (max-width: 57em) {
+      .booking-form-container {
+        width: 80%; } }
     @media screen and (max-width: 38em) {
       .booking-form-container {
         width: 100%; } }

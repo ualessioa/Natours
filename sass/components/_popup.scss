@@ -36,13 +36,25 @@
     display: flex;
     align-items: stretch;
 
+    @include respond(38em) {
+      flex-direction: column;
+    }
+
     .popup-left {
       flex: 0 0 30%;
       display: flex;
       flex-direction: column;
 
+      @include respond(38em) {
+        flex-direction: row;
+      }
+
       .popup-img {
         width: 100%;
+
+        @include respond(38em) {
+          width: 50%;
+        }
       }
     }
 
@@ -53,6 +65,10 @@
       align-items: flex-start;
       justify-content: center;
       padding: 3rem 5rem;
+
+      @include respond(38em) {
+        flex-grow: 3;
+      }
 
       .popup-text {
         font-size: 1.4rem;

@@ -7,8 +7,16 @@
   font-size: 1.6rem;
   transform: skewX(-12deg);
 
+  @include respond(38em) {
+    transform: skewX(-4deg);
+  }
+
   & > * {
     transform: skewX(12deg);
+
+    @include respond(38em) {
+      transform: skewX(4deg);
+    }
   }
 
   &-shape {

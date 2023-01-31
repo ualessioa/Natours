@@ -81,17 +81,23 @@
           </div>
           <div class="section-about-content-composition">
             <img
+              srcset="./img/nat-1.jpg 300w, ./img/nat-1-large.jpg 1000w"
               src="./img/nat-1-large.jpg"
+              sizes="(max-width: 50em) 22vw, (max-width: 50em) 35w, 300px"
               alt="Photo 1"
               class="composition-photo comp-photo-1"
             />
             <img
+              srcset="./img/nat-2.jpg 300w, ./img/nat-2-large.jpg 1000w"
               src="./img/nat-2-large.jpg"
+              sizes="(max-width: 50em) 22vw, (max-width: 50em) 35w, 300px"
               alt="Photo 2"
               class="composition-photo comp-photo-2"
             />
             <img
+              srcset="./img/nat-3.jpg 300w, ./img/nat-3-large.jpg 1000w"
               src="./img/nat-3-large.jpg"
+              sizes="(max-width: 50em) 22vw, (max-width: 50em) 35w, 300px"
               alt="Photo 3"
               class="composition-photo comp-photo-3"
             />
@@ -236,6 +242,8 @@
           <div class="story">
             <figure class="story-shape">
               <img
+                srcset="./img/nat-8.webp 1000w, ./img/nat-8.jpg 2000w"
+                sizes="(max-width: 38em) 26vw, (max-width: 44em) 30vw, 270px"
                 src="./img/nat-8.jpg"
                 alt="person on a tour"
                 class="story-shape-image"
@@ -260,6 +268,8 @@
           <div class="story">
             <figure class="story-shape">
               <img
+                srcset="./img/nat-9.webp 1000w, ./img/nat-9.jpg 2000w"
+                sizes="(max-width: 38em) 26vw, (max-width: 44em) 30vw, 270px"
                 src="./img/nat-9.jpg"
                 alt="person on a tour"
                 class="story-shape-image"
@@ -348,11 +358,20 @@
     </main>
     <footer class="footer">
       <div class="footer-logo-box">
-        <img
-          src="./img/logo-green-2x.png"
-          alt="Full logo"
-          class="footer-logo"
-        />
+        <picture class="footer-logo">
+          <source
+            srcset="
+              ./img/logo-green-small-1x.png 1x,
+              ./img/logo-green-small-2x.png 2x
+            "
+            media="(max-width: 38em)"
+          />
+          <img
+            srcset="./img/logo-green-1x.png 1x, ./img/logo-green-2x.png 2x"
+            src="./img/logo-green-2x.png"
+            alt="Full logo"
+          />
+        </picture>
       </div>
       <div class="footer-container">
         <div class="footer-navigation">
@@ -384,8 +403,20 @@
     <div class="popup" id="popup">
       <div class="popup-content">
         <div class="popup-left">
-          <img src="./img/nat-8.jpg" alt="tour photo" class="popup-img" />
-          <img src="./img/nat-9.jpg" alt="tour photo" class="popup-img" />
+          <img
+            srcset="./img/nat-8.webp 1000w, ./img/nat-8.jpg 2000w"
+            sizes="(max-width: 38em) 37vw, (max-width: 44em) 30vw, 270px"
+            src="./img/nat-8.jpg"
+            alt="person on a tour"
+            class="popup-img"
+          />
+          <img
+            srcset="./img/nat-9.webp 1000w, ./img/nat-9.jpg 2000w"
+            sizes="(max-width: 38em) 37vw, (max-width: 44em) 30vw, 270px"
+            src="./img/nat-9.jpg"
+            alt="person on a tour"
+            class="popup-img"
+          />
         </div>
         <div class="popup-right">
           <a href="#section-tours" class="popup-close">&times;</a>
